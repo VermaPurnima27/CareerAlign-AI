@@ -1,0 +1,6 @@
+$kind: http-request
+name: Login
+description: ""
+url: http://localhost:3000/api/auth/login
+method: POST
+order: 4157762134435104

@@ -1,0 +1,5 @@
+$kind: http-request
+description: ""
+url: "{{base_url}}/api/auth/logout"
+method: GET
+order: 4408908106383665
