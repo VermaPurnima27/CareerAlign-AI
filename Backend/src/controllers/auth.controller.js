@@ -41,7 +41,13 @@ async function registerUserController(req, res) {
         process.env.JWT_SECRET,
          { expiresIn: "1d" })
 
-    res.cookie("token", token)
+    // res.cookie("token", token)
+    res.cookie("token", token, {
+    httpOnly: true,
+    secure: false,
+    sameSite: "lax",
+    maxAge: 24 * 60 * 60 * 1000
+});
 
     res.status(201).json({
         message: "User registered successfully",
